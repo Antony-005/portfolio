@@ -2,6 +2,8 @@ import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -17,25 +19,45 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const title = "Antony Ochieng Odhiambo — Full-Stack Engineer & Product Architect";
+const title = "Antony Ochieng — Full-Stack Engineer & Product Architect";
 const description =
   "Full-stack software engineer and product architect building web applications that carry real business weight — from data model to production.";
 
 export const metadata = {
-  title,
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: title,
+    template: `%s — ${SITE_NAME}`,
+  },
   description,
-  // TODO: set this to your real domain once it's live, e.g. "https://antonyodhiambo.dev"
-  // metadataBase: new URL("https://antonyodhiambo.dev"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title,
     description,
     type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE_NAME,
+  url: SITE_URL,
+  jobTitle: "Full-Stack Engineer & Product Architect",
+  description,
 };
 
 export default function RootLayout({ children }) {
@@ -53,8 +75,13 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
       <body>
+        <GoogleAnalytics />
         <Nav />
         {children}
         <Footer />
