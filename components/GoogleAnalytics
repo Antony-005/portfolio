@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import Script from "next/script";
 
 export default function GoogleAnalytics() {
@@ -8,19 +9,17 @@ export default function GoogleAnalytics() {
   if (!gaId) return null;
 
   return (
-    <>
+    <Fragment>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        src={"https://www.googletagmanager.com/gtag/js?id=" + gaId}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${gaId}');
-        `}
+        {"window.dataLayer = window.dataLayer || [];\n" +
+          "function gtag(){dataLayer.push(arguments);}\n" +
+          "gtag('js', new Date());\n" +
+          "gtag('config', '" + gaId + "');"}
       </Script>
-    </>
+    </Fragment>
   );
 }
