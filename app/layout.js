@@ -19,9 +19,9 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const title = "Antony Ochieng — Full-Stack Engineer & Product Architect";
+const title = "Antony Ochieng - Full-Stack Engineer & Product Architect";
 const description =
-  "Full-stack software engineer and product architect building web applications that carry real business weight — from data model to production.";
+  "Full-stack software engineer and product architect building web applications that carry real business weight, from data model to production.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -48,6 +48,9 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google: "oW3h1sofCLWJ7Hd4Ght68C0gNM5TlZO-rpDdEKllg5w",
   },
 };
 
