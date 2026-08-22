@@ -10,8 +10,9 @@ export function generateMetadata({ params }) {
   const project = getProject(params.slug);
   if (!project) return {};
   return {
-    title: `${project.title} — Antony Ochieng Odhiambo`,
+    title: project.title,
     description: project.summary,
+    alternates: { canonical: `/work/${project.slug}` },
   };
 }
 

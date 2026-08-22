@@ -2,8 +2,9 @@ import PageHeader from "@/components/PageHeader";
 import Process from "@/components/Process";
 
 export const metadata = {
-  title: "Process - Antony Ochieng Odhiambo",
+  title: "Process",
   description: "From business model to production, in four stages.",
+  alternates: { canonical: "/process" },
 };
 
 export default function ProcessPage() {

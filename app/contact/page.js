@@ -2,14 +2,14 @@ import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Contact Antony Ochieng",
+  title: "Contact",
   description: "Start a project with Antony Ochieng.",
+  alternates: { canonical: "/contact" },
 };
-
 
 const WHATSAPP_NUMBER = "254740690360";
 const WHATSAPP_MESSAGE =
-  "Hi Antony — I found your portfolio and I'd like to talk about a project.";
+  "Hi Antony, I found your portfolio and I'd like to talk about a project.";
 const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE
 )}`;

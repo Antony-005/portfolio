@@ -2,8 +2,9 @@ import PageHeader from "@/components/PageHeader";
 import About from "@/components/About";
 
 export const metadata = {
-  title: "About — Antony Ochieng Odhiambo",
+  title: "About",
   description: "Full-stack software engineer and product architect.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

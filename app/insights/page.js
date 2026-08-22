@@ -3,8 +3,9 @@ import PageHeader from "@/components/PageHeader";
 import { insights } from "@/lib/insights";
 
 export const metadata = {
-  title: "Insights — Antony Ochieng Odhiambo",
+  title: "Insights",
   description: "Notes on architecture, engineering, and building things well.",
+  alternates: { canonical: "/insights" },
 };
 
 export default function InsightsPage() {

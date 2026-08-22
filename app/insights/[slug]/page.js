@@ -10,8 +10,9 @@ export function generateMetadata({ params }) {
   const post = getInsight(params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Antony Ochieng Odhiambo`,
+    title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/insights/${post.slug}` },
   };
 }
 

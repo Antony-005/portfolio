@@ -2,8 +2,9 @@ import PageHeader from "@/components/PageHeader";
 import { FAQ } from "@/components/InsightsFAQ";
 
 export const metadata = {
-  title: "FAQ — Antony Ochieng Odhiambo",
+  title: "FAQ",
   description: "Common questions about working together.",
+  alternates: { canonical: "/faq" },
 };
 
 export default function FAQPage() {

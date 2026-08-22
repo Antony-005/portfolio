@@ -3,8 +3,9 @@ import PageHeader from "@/components/PageHeader";
 import { projects } from "@/lib/projects";
 
 export const metadata = {
-  title: "Work — Antony Ochieng Odhiambo",
+  title: "Work",
   description: "Case studies in full-stack engineering and product architecture.",
+  alternates: { canonical: "/work" },
 };
 
 export default function WorkPage() {
@@ -12,8 +13,8 @@ export default function WorkPage() {
     <main>
       <PageHeader
         eyebrow="Selected Work"
-        title="Case studies."
-        description="Every project here is a real engagement, the problem going in, the decisions that mattered, and what changed for the client."
+        title="Case studies in shipping things that hold up."
+        description="Every project here is a real engagement — the problem going in, the decisions that mattered, and what changed for the client."
       />
 
       <section className="pb-24 md:pb-32 px-6 md:px-10">
