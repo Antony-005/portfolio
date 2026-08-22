@@ -1,11 +1,10 @@
 import Link from "next/link";
 
-// TODO: replace these href values with your real profile URLs
+// LinkedIn intentionally omitted for now — account is pending reinstatement.
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/YOUR-USERNAME" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/YOUR-USERNAME" },
-  { label: "X", href: "https://x.com/YOUR-USERNAME" },
-  { label: "Instagram", href: "https://instagram.com/YOUR-USERNAME" },
+  { label: "GitHub", href: "https://github.com/Antony-005" },
+  { label: "X", href: "https://x.com/AntonyO27832226" },
+  { label: "Instagram", href: "https://www.instagram.com/ant.ony056/" },
 ];
 
 export default function Footer() {
