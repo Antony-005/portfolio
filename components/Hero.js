@@ -1,28 +1,26 @@
 export default function Hero() {
   return (
-    <section id="top" className="relative pt-40 pb-28 md:pt-48 md:pb-36 px-6 md:px-10 overflow-hidden">
-      {/* Background image with overlay for text contrast */}
+    <section id="top" className="relative pt-40 pb-28 md:pt-48 md:pb-36 px-6 md:px-10 overflow-hidden min-h-[85vh] flex items-center">
       <div className="absolute inset-0 -z-10">
-        {/* Replace /public/profile_1.jpg with your photo — same filename, this will pick it up automatically */}
         <img
           src="/profile_1.jpg"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-top opacity-20"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-dark/80" />
+        <div className="absolute inset-0 bg-dark/55" />
       </div>
 
       <div className="max-w-6xl mx-auto relative">
-        <p className="label-eyebrow mb-6">Software Engineer</p>
+        <p className="text-label uppercase text-gold mb-6">Software Engineer</p>
 
-        <h1 className="text-h1 max-w-3xl">
+        <h1 className="text-h1 max-w-3xl text-white">
           Building complete web products{" "}
           <span className="text-gold">from idea to launch.</span>
         </h1>
 
-        <p className="text-body text-text-muted max-w-xl mt-8 leading-relaxed">
-          I'm Antony Ochieng — I design and build web applications end to
+        <p className="text-body max-w-xl mt-8 leading-relaxed text-white/85">
+          I'm Antony Ochieng, I design and build web applications end to
           end, from the data model through to a live, working product.
         </p>
 
@@ -35,7 +33,7 @@ export default function Hero() {
           </a>
           <a
             href="/contact"
-            className="inline-flex items-center px-7 py-3.5 rounded-sm border border-DEFAULT text-text-primary text-cta uppercase hover:border-gold transition-colors"
+            className="inline-flex items-center px-7 py-3.5 rounded-sm border border-white/40 text-white text-cta uppercase hover:border-gold hover:text-gold transition-colors"
           >
             Start a Project
           </a>
