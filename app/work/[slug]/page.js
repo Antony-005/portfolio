@@ -45,6 +45,27 @@ export default function ProjectPage({ params }) {
         </div>
       </div>
 
+      {project.screenshots && project.screenshots.length > 0 && (
+        <div className="px-6 md:px-10 pb-16 md:pb-20">
+          <div className="max-w-4xl mx-auto space-y-8">
+            {project.screenshots.map((shot) => (
+              <figure key={shot.src}>
+                <div className="rounded-sm overflow-hidden border border-DEFAULT bg-surface">
+                  <img
+                    src={shot.src}
+                    alt={shot.caption}
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <figcaption className="text-body-sm text-text-dim mt-3">
+                  {shot.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="px-6 md:px-10 pb-24 md:pb-32">
         <div className="max-w-3xl mx-auto space-y-14">
           <div>

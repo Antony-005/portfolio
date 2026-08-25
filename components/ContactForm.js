@@ -2,21 +2,40 @@
 
 import { useState } from "react";
 
+const BUDGET_RANGES = {
+  KES: ["Under KES 30,000", "KES 30,000 – 80,000", "KES 80,000 – 200,000", "KES 200,000+"],
+  USD: ["Under $250", "$250 – $650", "$650 – $1,500", "$1,500+"],
+  EUR: ["Under €230", "€230 – €600", "€600 – €1,400", "€1,400+"],
+};
+
 const initialState = {
   name: "",
   email: "",
   projectType: "Full-stack web application",
-  budget: "$5k - $15k",
+  currency: "KES",
+  budget: BUDGET_RANGES.KES[1],
   timeline: "1-3 months",
   message: "",
 };
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialState);
-  const [status, setStatus] = useState("idle"); 
+  const [status, setStatus] = useState("idle"); // idle | submitting | sent | error
 
   function update(field) {
     return (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
+  }
+
+  function updateCurrency(e) {
+    const nextCurrency = e.target.value;
+    setForm((f) => ({
+      ...f,
+      currency: nextCurrency,
+      budget:
+        BUDGET_RANGES[nextCurrency][
+          BUDGET_RANGES[f.currency].indexOf(f.budget)
+        ] || BUDGET_RANGES[nextCurrency][0],
+    }));
   }
 
   async function handleSubmit(e) {
@@ -79,21 +98,37 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div>
+        <label className="text-body-sm text-text-muted block mb-2" htmlFor="projectType">
+          Project type
+        </label>
+        <select
+          id="projectType"
+          value={form.projectType}
+          onChange={update("projectType")}
+          className="w-full bg-surface border border-DEFAULT rounded-sm px-4 py-3 text-body-sm text-text-primary focus:border-gold outline-none"
+        >
+          <option>Full-stack web application</option>
+          <option>System design &amp; planning</option>
+          <option>Technical audit</option>
+          <option>Something else</option>
+        </select>
+      </div>
+
+      <div className="grid md:grid-cols-[auto_1fr_1fr] gap-6 items-end">
         <div>
-          <label className="text-body-sm text-text-muted block mb-2" htmlFor="projectType">
-            Project type
+          <label className="text-body-sm text-text-muted block mb-2" htmlFor="currency">
+            Currency
           </label>
           <select
-            id="projectType"
-            value={form.projectType}
-            onChange={update("projectType")}
+            id="currency"
+            value={form.currency}
+            onChange={updateCurrency}
             className="w-full bg-surface border border-DEFAULT rounded-sm px-4 py-3 text-body-sm text-text-primary focus:border-gold outline-none"
           >
-            <option>Full-stack web application</option>
-            <option>Product architecture / advisory</option>
-            <option>Technical audit</option>
-            <option>Something else</option>
+            <option value="KES">KES</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
           </select>
         </div>
         <div>
@@ -106,10 +141,11 @@ export default function ContactForm() {
             onChange={update("budget")}
             className="w-full bg-surface border border-DEFAULT rounded-sm px-4 py-3 text-body-sm text-text-primary focus:border-gold outline-none"
           >
-            <option>Under $5k</option>
-            <option>$5k - $15k</option>
-            <option>$15k - $40k</option>
-            <option>$40k+</option>
+            {BUDGET_RANGES[form.currency].map((range) => (
+              <option key={range} value={range}>
+                {range}
+              </option>
+            ))}
           </select>
         </div>
         <div>
