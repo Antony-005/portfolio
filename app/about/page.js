@@ -3,7 +3,7 @@ import About from "@/components/About";
 
 export const metadata = {
   title: "About",
-  description: "Full-stack software engineer and product architect.",
+  description: "Software engineer building complete web products.",
   alternates: { canonical: "/about" },
 };
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import AboutPreview from "@/components/AboutPreview";
 import { projects } from "@/lib/projects";
 import Testimonial from "@/components/Testimonial";
 
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <AboutPreview />
 
       <section id="work" className="py-24 md:py-32 px-6 md:px-10 section-border-top">
         <div className="max-w-6xl mx-auto">

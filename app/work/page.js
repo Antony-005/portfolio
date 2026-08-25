@@ -4,7 +4,7 @@ import { projects } from "@/lib/projects";
 
 export const metadata = {
   title: "Work",
-  description: "Case studies in full-stack engineering and product architecture.",
+  description: "Case studies in software engineering and full-stack development.",
   alternates: { canonical: "/work" },
 };
 

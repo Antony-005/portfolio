@@ -1,6 +1,6 @@
 const SERVICES = [
   {
-    title: "Product Architecture",
+    title: "System Design & Planning",
     description:
       "Turning an ambiguous business model into a system design that can actually be built — data model, API boundaries, and the trade-offs made explicit before a line of code is written.",
   },

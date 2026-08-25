@@ -1,13 +1,13 @@
 const EXPERIENCE = [
   {
-    period: "2026 - Present",
-    role: "Full-Stack Engineer & Product Architect",
+    period: "2023 — Present",
+    role: "Software Engineer",
     org: "Independent Consulting",
     description:
       "Designing and shipping full-stack web applications for clients, from data model through deployment.",
   },
   {
-    period: "2022-2026",
+    period: "2019 — 2023",
     role: "B.Sc. Computer Science / Software Engineering",
     org: "University",
     description:
@@ -27,33 +27,56 @@ export default function About({ standalone = false }) {
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
         <div>
-          <div className="w-full max-w-xs aspect-[4/5] mb-8 rounded-sm overflow-hidden border border-DEFAULT bg-surface">
+          <div className="w-full max-w-xs aspect-[4/5] mb-6 rounded-sm overflow-hidden border border-DEFAULT bg-surface">
+            {/* Replace /public/profile_2.jpg with your photo — same filename, this will pick it up automatically */}
             <img
-              src="/profile.jpg"
-              alt="Portrait of Antony Ochieng Odhiambo"
+              src="/profile_2.jpg"
+              alt="Portrait of Antony Ochieng"
               className="w-full h-full object-cover object-top"
             />
           </div>
+
+          {/* Replace /public/Antony_Ochieng_CV.pdf with your actual CV file — same filename */}
+          <a
+            href="/Antony_Ochieng_CV.pdf"
+            download
+            className="inline-flex items-center gap-2 mb-8 text-nav uppercase text-gold hover:text-gold-light"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3v12" />
+              <path d="M7 10l5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+            Download CV
+          </a>
 
           {!standalone && (
             <>
               <p className="label-eyebrow mb-4">About</p>
               <h2 className="text-h2 mb-8">
-                Engineering with the business model in view.
+                Engineering with the product in view.
               </h2>
             </>
           )}
           <p className="text-body text-text-muted leading-relaxed mb-4">
-            I'm Antony Ochieng Odhiambo, a full-stack software engineer and
-            product architect. My work sits at the intersection of backend
-            systems that scale and interfaces that people actually enjoy
-            using, with an emphasis on getting the architecture right before
-            the pixels.
+            I'm Antony Ochieng, a software engineer based in Kenya. I build
+            full-stack web applications — from the data model through to a
+            live, working product — and I care about getting the details
+            right along the way.
           </p>
           <p className="text-body text-text-muted leading-relaxed">
             I take on a small number of client engagements at a time, so each
-            one gets full architectural attention rather than a template
-            applied twice.
+            one gets proper attention rather than a template applied twice.
           </p>
         </div>
 

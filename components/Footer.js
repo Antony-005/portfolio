@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 // LinkedIn intentionally omitted for now — account is pending reinstatement.
+// Add back once restored: { label: "LinkedIn", href: "https://linkedin.com/in/YOUR-HANDLE" }
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/Antony-005" },
   { label: "X", href: "https://x.com/AntonyO27832226" },
@@ -32,9 +33,9 @@ export default function Footer() {
               AO
             </span>
             <p className="text-body-sm text-text-dim">
-              Antony Ochieng Odhiambo
+              Antony Ochieng
               <br />
-              Full-Stack Engineer &amp; Product Architect
+              Software Engineer
             </p>
           </div>
 
@@ -53,7 +54,7 @@ export default function Footer() {
           </nav>
 
           <p className="text-body-sm text-text-dim">
-            &copy; {year} Antony Ochieng Odhiambo. All rights reserved.
+            &copy; {year} Antony Ochieng. All rights reserved.
           </p>
         </div>
       </div>
