@@ -19,15 +19,15 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const title = "Antony Ochieng — Software Engineer";
+const title = "Antony Ochieng | Software Engineer";
 const description =
-  "Software engineer building complete web products, from idea to launch — full-stack web applications for real clients.";
+  "Software engineer building complete web products, from idea to launch. Full-stack web applications for real clients.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: title,
-    template: `%s — ${SITE_NAME}`,
+    template: `%s | ${SITE_NAME}`,
   },
   description,
   alternates: {

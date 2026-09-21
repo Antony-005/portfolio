@@ -1,13 +1,13 @@
 const EXPERIENCE = [
   {
-    period: "2026 - Present",
+    period: "2023 to Present",
     role: "Software Engineer",
     org: "Independent Consulting",
     description:
       "Designing and shipping full-stack web applications for clients, from data model through deployment.",
   },
   {
-    period: "2022 - 2026",
+    period: "2019 to 2023",
     role: "B.Sc. Computer Science / Software Engineering",
     org: "University",
     description:
@@ -28,7 +28,7 @@ export default function About({ standalone = false }) {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
         <div>
           <div className="w-full max-w-xs aspect-[4/5] mb-6 rounded-sm overflow-hidden border border-DEFAULT bg-surface">
-            {/* Replace /public/profile_2.jpg with your photo — same filename, this will pick it up automatically */}
+            {/* Replace /public/profile_2.jpg with your photo, same filename, this will pick it up automatically */}
             <img
               src="/profile_2.jpg"
               alt="Portrait of Antony Ochieng"
@@ -36,7 +36,7 @@ export default function About({ standalone = false }) {
             />
           </div>
 
-          {/* Replace /public/Antony_Ochieng_CV.pdf with your actual CV file — same filename */}
+          {/* Replace /public/Antony_Ochieng_CV.pdf with your actual CV file, same filename */}
           <a
             href="/Antony_Ochieng_CV.pdf"
             download
@@ -70,8 +70,8 @@ export default function About({ standalone = false }) {
           )}
           <p className="text-body text-text-muted leading-relaxed mb-4">
             I'm Antony Ochieng, a software engineer based in Kenya. I build
-            full-stack web applications — from the data model through to a
-            live, working product — and I care about getting the details
+            full-stack web applications, from the data model through to a
+            live, working product, and I care about getting the details
             right along the way.
           </p>
           <p className="text-body text-text-muted leading-relaxed">

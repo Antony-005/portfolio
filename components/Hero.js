@@ -1,7 +1,9 @@
 export default function Hero() {
   return (
     <section id="top" className="relative pt-40 pb-28 md:pt-48 md:pb-36 px-6 md:px-10 overflow-hidden min-h-[85vh] flex items-center">
+      {/* Full-strength background image with a single flat overlay for text contrast */}
       <div className="absolute inset-0 -z-10">
+        {/* Replace /public/profile_1.jpg with your photo, same filename, this will pick it up automatically */}
         <img
           src="/profile_1.jpg"
           alt=""
@@ -20,7 +22,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-body max-w-xl mt-8 leading-relaxed text-white/85">
-          I'm Antony Ochieng, I design and build web applications end to
+          I'm Antony Ochieng. I design and build web applications end to
           end, from the data model through to a live, working product.
         </p>
 

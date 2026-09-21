@@ -13,12 +13,12 @@ const SERVICES = [
   {
     title: "System Design & Planning",
     description:
-      "Turning an ambiguous business model into a system design that can actually be built — data model, API boundaries, and the trade-offs made explicit before a line of code is written.",
+      "Turning an ambiguous business model into a system design that can actually be built: data model, API boundaries, and the trade-offs made explicit before a line of code is written.",
   },
   {
     title: "Full-Stack Web Applications",
     description:
-      "React and Next.js front ends backed by scalable, well-tested services — built for the traffic you'll have in a year, not just the demo.",
+      "React and Next.js front ends backed by scalable, well-tested services, built for the traffic you'll have in a year, not just the demo.",
   },
   {
     title: "Technical Advisory",
@@ -33,7 +33,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="Services"
         title="Engagements built around outcomes, not hours."
-        description="Each engagement starts with the business problem, not the tech stack — the architecture follows from there."
+        description="Each engagement starts with the business problem, not the tech stack. The architecture follows from there."
       />
 
       <section className="pb-24 md:pb-32 px-6 md:px-10">

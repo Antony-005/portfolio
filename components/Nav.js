@@ -24,26 +24,28 @@ export default function Nav() {
           AO
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
-          {LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-nav uppercase text-text-muted hover:text-gold"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden lg:flex items-center gap-10">
+          <nav className="flex items-center gap-8">
+            {LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-nav uppercase text-text-muted hover:text-gold"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <ThemeToggle />
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 rounded-sm bg-gold text-dark text-cta uppercase font-medium hover:bg-gold-light transition-colors"
-          >
-            Let&rsquo;s Talk
-          </Link>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-6 py-3 rounded-sm bg-gold text-dark text-cta uppercase font-medium hover:bg-gold-light transition-colors"
+            >
+              Let&rsquo;s Talk
+            </Link>
+          </div>
         </div>
 
         <div className="lg:hidden flex items-center gap-3">

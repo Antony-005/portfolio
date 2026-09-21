@@ -1,7 +1,7 @@
 const FAQS = [
   {
     q: "What's the typical engagement length?",
-    a: "Most projects run 4–10 weeks depending on scope, from architecture through deployment.",
+    a: "Most projects run 4 to 10 weeks depending on scope, from architecture through deployment.",
   },
   {
     q: "Do you work with early-stage founders?",
