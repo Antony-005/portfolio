@@ -8,9 +8,7 @@ export default function sitemap() {
     "/work",
     "/services",
     "/about",
-    "/process",
     "/insights",
-    "/faq",
     "/contact",
   ].map((path) => ({
     url: `${SITE_URL}${path}`,

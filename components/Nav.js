@@ -5,13 +5,10 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
+  { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
-  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
-  { label: "Experience", href: "/about#experience" },
-  { label: "Process", href: "/process" },
-  { label: "Insights", href: "/insights" },
-  { label: "FAQ", href: "/faq" },
+  { label: "Services", href: "/services" },
 ];
 
 export default function Nav() {

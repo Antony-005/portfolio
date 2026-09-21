@@ -1,5 +1,7 @@
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
+import Process from "@/components/Process";
+import { FAQ } from "@/components/InsightsFAQ";
 
 export const metadata = {
   title: "Services",
@@ -49,11 +51,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <Process />
+
+      <FAQ />
+
       <section className="pb-24 md:pb-32 px-6 md:px-10 text-center">
         <p className="text-body-sm text-text-muted mb-6">
-          Curious how an engagement actually runs?{" "}
-          <Link href="/process" className="text-gold hover:text-gold-light">
-            See the process →
+          Want to see how I think about problems?{" "}
+          <Link href="/insights" className="text-gold hover:text-gold-light">
+            Read my insights →
           </Link>
         </p>
         <Link
