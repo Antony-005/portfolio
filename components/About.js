@@ -1,13 +1,13 @@
 const EXPERIENCE = [
   {
-    period: "2023 to Present",
+    period: "2026 to Present",
     role: "Software Engineer",
     org: "Independent Consulting",
     description:
       "Designing and shipping full-stack web applications for clients, from data model through deployment.",
   },
   {
-    period: "2019 to 2023",
+    period: "2022 to 2026",
     role: "B.Sc. Computer Science / Software Engineering",
     org: "University",
     description:
